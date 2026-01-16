@@ -1,0 +1,48 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <div class="card-header">
+      <span class="f1-line"></span>
+      <h2>SIGN UP</h2>
+    </div>
+
+    <form class="auth-form">
+      @if (!isLogin) {
+        <div class="input-group">
+          <label>USERNAME</label>
+          <input [(ngModel)]="Login" name="userName" type="text" placeholder="Enter your username">
+        </div>
+      }
+
+      <div class="input-group">
+        <label>EMAIL ADDRESS</label>
+        <input [(ngModel)]="Email" name="email" type="email" placeholder="name@example.com">
+      </div>
+
+      <div class="input-group">
+        <label>PASSWORD</label>
+        <input [(ngModel)]="Password" name="password" type="password" placeholder="••••••••">
+      </div>
+
+      <button type="button" class="btn-primary" (click)="onSubmit()">
+        {{ isLogin ? 'LOG IN' : 'SIGN UP' }}
+      </button>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <button type="button" class="btn-google" (click)="loginWithGoogle()">
+       <img src="/images/Google-logo.png" alt="Google">
+        CONTINUE WITH GOOGLE
+      </button>
+    </form>
+
+    <div class="card-footer">
+      @if (isLogin) {
+        <p>New to F1? <a routerLink="/registr">Create an account</a></p>
+      } @else {
+        <p>Already have an account? <a routerLink="/login">Log in</a></p>
+      }
+    </div>
+  </div>
+</div>

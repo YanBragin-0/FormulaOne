@@ -1,0 +1,57 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.f1-card {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.1) !important;
+}
+
+.mat-mdc-header-cell {
+  background-color: #f8f9fa;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.table-row:hover {
+  background-color: #f4d0e97b; // Подсветка строки при наведении
+  transition: background-color 0.2s;
+}
+
+.pos-cell {
+  color: #fcfcfc;
+  font-weight: 500;
+  width: 50px;
+}
+.driver-cell{
+  font-weight: bold;
+  color: #c4adfa;
+}
+.team-cell{
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.points-badge {
+  background: #e10600; // Фирменный красный F1
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.f1-logo {
+  background-image: url('/images/f1.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  display: inline-block;
+}

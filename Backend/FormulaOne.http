@@ -1,0 +1,6 @@
+@FormulaOne_HostAddress = http://localhost:5029
+
+GET {{FormulaOne_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

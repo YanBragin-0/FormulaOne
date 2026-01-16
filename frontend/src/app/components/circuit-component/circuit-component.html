@@ -1,0 +1,43 @@
+<div class="circuits-container">
+  <h1 class="page-title">F1 CIRCUITS 2025</h1>
+  
+  <div class="circuits-grid">
+    @for (race of circuitsData(); track race.title) {
+      <div class="circuit-card">
+        
+        <div class="circuit-image-wrapper">
+          <img [src]="'/images/Circuits/' + race.title.trim() + '.avif'" 
+               [alt]="race.title"
+               class="circuit-photo"
+               onerror="this.src='/images/circuits2025.jpg'">
+          <div class="circuit-overlay"></div>
+        </div>
+
+        <div class="circuit-content">
+          <div class="card-header">
+            <span class="country-code">{{race.country}} </span>
+            <span class="length-badge">{{ race.length }} KM</span>
+          </div>
+          
+          <div class="circuit-info">
+            <h2 class="circuit-title">{{ race.title }}</h2>
+            <p class="location-text">
+               <mat-icon>location_on</mat-icon> {{ race.country }}
+            </p>
+
+            <div class="circuit-stats">
+              <div class="stat-box">
+                <span class="label">LAP LENGTH</span>
+                <span class="value">{{ race.length }} km</span>
+              </div>
+              <div class="stat-box">
+                <span class="label">TYPE</span>
+                <span class="value">International Circuit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

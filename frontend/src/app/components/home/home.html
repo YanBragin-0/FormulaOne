@@ -1,0 +1,97 @@
+
+<div class="home-container">
+ <div class="search-container">
+  <div class="search-box">
+    <mat-icon class="search-icon">search</mat-icon>
+    <input 
+      type="text" 
+      #searchInput 
+      (input)="onSearch(searchInput.value)" 
+      placeholder="SEARCH..."
+      class="custom-search-input"
+    >
+    <div class="search-line"></div> </div>
+
+  @if (elasticResults().length > 0) {
+    <div class="search-results-overlay">
+      @for (item of elasticResults(); track item.id) {
+        <div class="search-row" (click)="onResultClick(item)">
+          <div class="info">
+            <span class="category-tag">{{ item.docType }}</span>
+            <span class="main-title">{{ item.title }}</span>
+          </div>
+          <mat-icon>chevron_right</mat-icon>
+        </div>
+      }
+    </div>
+  }
+</div>
+
+  <div class="main-content">
+    </div>
+</div>
+<div class="dashboard-grid">
+  <mat-card class="menu-card" routerLink="/allTeams">
+    <div class="card-image-wrapper">
+      <img mat-card-image src="/images/teams-card.webp"> </div>
+    <mat-card-content class="card-info">
+      <h2>Teams</h2>
+      <p>Команды и их биографии</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="menu-card" routerLink="/drivers">
+    <div class="card-image-wrapper">
+      <img mat-card-image src="/images/drivers.jpg"> </div>
+    <mat-card-content class="card-info">
+      <h2>Drivers</h2>
+      <p>Гонщики и их биографии</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="menu-card" routerLink="/races">
+    <div class="card-image-wrapper">
+      <img mat-card-image src="/images/race-calendar.webp"> </div>
+    <mat-card-content class="card-info">
+      <h2>Races</h2>
+      <p>Календарь гонок 2025</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="menu-card" routerLink="/circuits">
+    <div class="card-image-wrapper">
+      <img mat-card-image src="/images/circuits2025.jpg"> </div>
+    <mat-card-content class="card-info">
+      <h2>Circuits</h2>
+      <p>Трассы</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="menu-card" routerLink="/cars">
+    <div class="card-image-wrapper">
+      <img mat-card-image src="/images/car2025.jpg"> </div>
+    <mat-card-content class="card-info">
+      <h2>Cars</h2>
+      <p>Болиды</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="menu-card" routerLink="/constructorsTable">
+    <div class="card-image-wrapper">
+      <img mat-card-image src="/images/championship2025.jpg"> </div>
+    <mat-card-content class="card-info">
+      <h2>Constructors Cup</h2>
+      <p>Кубок конструкторов</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="menu-card" routerLink="/driversTable">
+    <div class="card-image-wrapper">
+      <img mat-card-image src="/images/Drivers-cup.webp"> </div>
+    <mat-card-content class="card-info">
+      <h2>Drivers Cup</h2>
+      <p>Кубок пилотов</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+

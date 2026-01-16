@@ -1,0 +1,62 @@
+.details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #e10600;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    .detail-logo {
+      height: 80px;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin: 0;
+      text-transform: uppercase;
+      color: #f8f1f1;
+      font-family: 'Formula1-Bold', sans-serif;
+    }
+  }
+}
+
+.bio-card {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  
+  mat-card-title {
+    margin-bottom: 20px;
+    color: #f39aff;
+    font-weight: 700;
+    font-family: 'Formula1-Bold', sans-serif;
+  }
+
+  .bio-text {
+  white-space: pre-line; 
+  text-align: justify;   
+  line-height: 1.6;      
+  font-size: 1.1rem;
+  color: #fceeee;
+  font-family: 'Formula1-Bold', sans-serif;
+  }
+}

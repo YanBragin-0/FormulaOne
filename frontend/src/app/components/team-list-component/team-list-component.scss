@@ -1,0 +1,98 @@
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.team-item-card {
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(92, 18, 230, 0.1);
+  }
+
+  img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+}
+.teams-container {
+  padding: 40px 20px;
+  background: #0c0c0c00; 
+  min-height: 100vh;
+}
+
+.page-title {
+  color: #ffffff;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-left: 5px solid #e10600;
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  border-radius: 0 0 10px 10px;
+  border: none;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(184, 6, 238, 0.25);
+    
+    .card-accent { height: 8px; }
+    .arrow-icon { transform: translateX(5px); color: #e10600; }
+  }
+}
+
+.card-accent {
+  height: 4px;
+  background: #f00505;
+  transition: height 0.3s ease;
+}
+
+.logo-wrapper {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.623);
+
+  .team-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.team-info {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5px;
+  border-top: 1px solid #eee;
+
+  .team-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Titillium Web', sans-serif;
+  }
+}

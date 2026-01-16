@@ -1,0 +1,122 @@
+h1{
+    font-family: 'Formula1-Bold', sans-serif;
+    font-size: 36px;
+    color: rgb(255, 251, 251);
+    text-align: left;
+    margin-bottom: 30px;
+}
+h2{
+    font-family: 'Formula1-Bold', sans-serif;
+    font-size: 28px;
+    color: rgb(255, 251, 251);
+    text-align: left;
+    margin-bottom: 20px;
+}
+.drivers-container {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.drivers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.driver-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; // Добавим небольшое скругление для аккуратности
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(252, 98, 193, 0.5);
+    background: rgba(247, 46, 129, 0.12);
+  }
+}
+
+.driver-image-wrapper {
+  width: 100%;
+  height: 220px; // ЖЕСТКО ограничиваем высоту фото, чтобы не растягивало
+  overflow: hidden;
+  background: #000;
+  border-bottom: 3px solid #e10600;
+
+  .driver-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // КАРТИНКА ЗАПОЛНЯЕТ БЛОК БЕЗ ИСКАЖЕНИЙ
+    object-position: top; // Всегда показываем лицо, если фото высокое
+    transition: transform 0.5s ease;
+  }
+}
+
+.driver-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-family: 'Formula1-Bold', sans-serif;
+}
+
+.driver-name {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.team-name {
+    font-family: 'Formula1-Regular', sans-serif;
+  color: #00d2be;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0 15px 0;
+}
+
+.stats-row {
+  display: flex;
+  gap: 20px;
+  background: rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.stat-item {
+    font-family: 'Formula1-Regular', sans-serif;
+  display: flex;
+  flex-direction: column;
+  .stat-label { font-size: 9px; color: #aaa; }
+  .stat-value { color: white; font-size: 13px; font-weight: bold; }
+}
+
+.biography-box {
+  p {
+    font-family: 'Formula1-Regular', sans-serif;
+    color: #ddd;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

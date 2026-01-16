@@ -1,0 +1,143 @@
+.cars-container {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  color: white;
+  font-family: 'Formula1-Bold', sans-serif;
+  border-left: 6px solid #1462f3;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cars-grid {
+  display: grid;
+  // Сделаем карточки чуть шире, чем у пилотов, чтобы болид влез красиво
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+}
+
+.car-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(68, 235, 247, 0.7);
+    border: 1px solid rgba(32, 248, 165, 0.4); // Красное свечение при ховере
+
+    .car-photo {
+      transform: scale(1.08) translateX(10px); // Небольшой сдвиг создает эффект движения
+    }
+  }
+}
+
+.car-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #000;
+
+  .car-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+
+  .car-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 100%);
+  }
+}
+
+.car-content {
+  padding: 25px;
+  border-top: 3px solid #19a7ca;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  .team-label {
+    font-family: 'Formula1-Bold', sans-serif;
+    color: #fbfffe;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  .accent-dot {
+    width: 6px;
+    height: 6px;
+    background: #00d2be;
+    border-radius: 50%;
+  }
+}
+
+.car-title {
+  color: rgba(0, 252, 218, 0.658);
+  font-family: 'Formula1-Bold', sans-serif;
+  font-size: 26px;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+}
+
+.description-box {
+  p {
+    font-family: 'Formula1-Regular', sans-serif;
+    color: #fdfdfd;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    height: 70px; // Фиксируем для 3 строк
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.car-footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(10, 190, 245, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .spec-label {
+    color: #06e6da;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .spec-value {
+    color: rgb(52, 230, 243);
+    font-size: 12px;
+    background: rgba(255,255,255,0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="teams-container">
+  <h1 class="page-title">F1 Teams 2025</h1>
+  
+  <div class="teams-grid">
+    @for (team of teamsData(); track team.teamName) {
+      <mat-card class="team-card" [routerLink]="['/teamInfo', team.teamName.trim()]">
+        <div class="card-accent"></div> <div class="logo-wrapper">
+          <img [src]="'/images/Logos/' + team.teamName.trim() + '.png'" 
+            [alt]="team.teamName" 
+            class="team-logo">
+        </div>
+
+        <mat-card-content>
+          <div class="team-info">
+            <span class="team-name">{{ team.teamName }}</span>
+            <mat-icon class="arrow-icon">chevron_right</mat-icon>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</div>

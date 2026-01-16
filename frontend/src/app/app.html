@@ -1,0 +1,30 @@
+<div class="video-bg-wrapper">
+  <div class="video-container">
+  <video 
+    [src]="currentVideo()" 
+    autoplay 
+    muted 
+    playsinline
+    (ended)="playNext()">
+  </video>
+  </div>
+</div>
+<mat-toolbar class="f1-header mat-elevation-z4">
+  <div class="header-container">
+    <div class="logo-group" routerLink="/">
+      <span class="f1-title">FORMULA 1</span>
+    </div>
+
+    <span class="spacer"></span>
+
+    <div class="auth-buttons">
+      <button routerLink="/registr" mat-button class="nav-btn">REGISTRATION</button>
+      <button routerLink="/login" mat-flat-button class="login-btn">LOG IN</button>
+    </div>
+  </div>
+</mat-toolbar>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+

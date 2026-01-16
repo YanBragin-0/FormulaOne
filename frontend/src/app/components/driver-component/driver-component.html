@@ -1,0 +1,43 @@
+<div class="drivers-container">
+  <h1 class="page-title">F1 DRIVERS 2025</h1>
+  
+  <div class="drivers-grid">
+    @for (driver of driversData(); track driver.name) {
+      <div class="driver-card">
+        
+        <div class="driver-image-wrapper">
+          <img [src]="'/images/Drivers/' + driver.name.trim() + '.png'" 
+               [alt]="driver.name"
+               class="driver-photo"
+              >
+        </div>
+
+        <div class="driver-content">
+          <div class="card-header">
+            <span class="country-code" style="color: aliceblue;">{{ (driver.country + '') | slice:0:3 | uppercase }}</span>
+          </div>
+          
+          <div class="driver-info">
+            <h2 class="driver-name">{{ driver.name }}</h2>
+            <p class="team-name">{{ driver.team }}</p>
+            
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-label">AGE</span>
+                <span class="stat-value">{{ driver.age }}</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">COUNTRY</span>
+                <span class="stat-value">{{ driver.country }}</span>
+              </div>
+            </div>
+
+            <div class="biography-box">
+               <p>{{ driver.biography }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="cars-container">
+  <h1 class="page-title">F1 2025 CHALLENGERS</h1>
+  
+  <div class="cars-grid">
+    @for (car of carsData(); track car.title) {
+      <div class="car-card">
+        
+        <div class="car-image-wrapper">
+          <img [src]="'/images/Cars/' + car.title.trim() + '.webp'" 
+               [alt]="car.title"
+               class="car-photo"
+               onerror="this.src='/images/car2025.jpg'">
+          <div class="car-overlay"></div>
+        </div>
+
+        <div class="car-content">
+          <div class="card-header">
+            <span class="team-label">{{ car.team | uppercase }}</span>
+            <div class="accent-dot"></div>
+          </div>
+          
+          <div class="car-info">
+            <h2 class="car-title">{{ car.title }}</h2>
+            
+            <div class="description-box">
+               <p>{{ car.description }}</p>
+            </div>
+
+            <div class="car-footer">
+              <span class="spec-label">SEASON</span>
+              <span class="spec-value">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
