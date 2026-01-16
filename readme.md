@@ -1,4 +1,7 @@
 ![.NET](https://img.shields.io/badge/.NET-8.0-512bd4?style=for-the-badge&logo=dotnet)
-![Angular](https://img.shields.io/badge/Angular-18-dd0031?style=for-the-badge&logo=angular)
 ![Docker](https://img.shields.io/badge/Docker-enabled-2496ed?style=for-the-badge&logo=docker)
 ![ElasticSearch](https://img.shields.io/badge/ElasticSearch-Search-005571?style=for-the-badge&logo=elasticsearch)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-18-dd0031?style=for-the-badge&logo=angular)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
