@@ -1,0 +1,11 @@
+bin/
+obj/
+[Rr]elease/
+[Dd]ebug/
+
+appsettings.json
+appsettings.*.json
+
+.vs/
+.vscode/
+*.user
